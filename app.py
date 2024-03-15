@@ -14,7 +14,7 @@ working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # loading the saved models
 
-wine_pred_model = pickle.load(open(f'{working_dir}/wine_quality.sav', 'rb'))
+wine_pred_model = pickle.load(open('wine_quality.sav', 'rb'))
 
 
 # sidebar for navigation
