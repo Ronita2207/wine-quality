@@ -14,7 +14,10 @@ working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # loading the saved models
 
-wine_pred_model = pickle.load(open('wine_quality.sav', 'rb'))
+with open("wine_quality.sav", 'rb') as f:
+   wine_pred_model = pickle.load(f)
+
+# wine_pred_model = pickle.load(open('wine_quality.sav', 'rb'))
 
 
 # sidebar for navigation
@@ -29,7 +32,7 @@ with st.sidebar:
 if selected == 'Wine':
 
     # page title
-    st.title('Wine Qulaity Prediction using ML')
+    st.title('Wine Qulality Prediction using ML')
 
     # getting the input data from the user
     col1, col2, col3 = st.columns(3)
