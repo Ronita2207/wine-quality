@@ -32,7 +32,7 @@ with st.sidebar:
 if selected == 'Wine':
 
     # page title
-    st.title('Wine Qulality Prediction using ML')
+    st.title('Wine Quality Prediction using ML')
 
     # getting the input data from the user
     col1, col2, col3 = st.columns(3)
@@ -59,7 +59,7 @@ if selected == 'Wine':
         g = st.slider('Total Sulphur Disoxide', 6, 289, 6)
 
     with col2:
-        h = st.slider('Density', 0.9900, 1.0000, 0.9900)
+        h = st.slider('Density', 0.990, 1.000, 0.990)
 
     with col3:
         i = st.slider('pH', 2.74, 4.01, 2.74)
@@ -72,7 +72,7 @@ if selected == 'Wine':
     
 
     # code for Prediction
-    wine_diagnosis = ''
+    wine_prediction = ''
 
     # creating a button for Prediction
 
@@ -84,4 +84,5 @@ if selected == 'Wine':
 
         wine_prediction = wine_pred_model.predict([user_input])
 
+    st.text("The rating of wine of out 10: ")
     st.success(wine_prediction)
