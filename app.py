@@ -84,5 +84,5 @@ if selected == 'Wine':
 
         wine_prediction = wine_pred_model.predict([user_input])
 
-    st.text("The rating of wine of out 10: ")
+    # st.text("The rating of wine of out 10: ")
     st.success(wine_prediction)
