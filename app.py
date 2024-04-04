@@ -28,7 +28,6 @@ with st.sidebar:
                            default_index=0)
 
 
-# Diabetes Prediction Page
 if selected == 'Wine':
 
     # page title
